@@ -1,4 +1,7 @@
+set tabstop=4 shiftwidth=4 expandtab
+
 call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
@@ -12,6 +15,11 @@ call plug#end()
 syntax on
 set noswapfile
 
+nnoremap <C-s> :noh<cr>
+nnoremap <C-h> :tabprev<cr>
+nnoremap <C-l> :tabnext<cr>
+nnoremap <C-k> :tabnew<cr>
+nnoremap <C-j> :tabclose<cr>
 nnoremap <m-t> :NERDTreeToggle<cr>
 nnoremap <s-t> :terminal<cr>
 nnoremap <m-f> :FZF<cr>
@@ -22,6 +30,7 @@ let g:Guifont="DejaVu Sans Mono :h8"
 " color bluechia
 " color Spink
 color deep-space
+color Atelier_HeathLight
 set nu
 
 autocmd BufWritePre *.py execute ':Black'
