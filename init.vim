@@ -42,3 +42,5 @@ set nu
 
 autocmd BufWritePre *.py execute ':Black'
 autocmd BufWritePre *.proto execute ':ClangFormat'
+autocmd BufWritePre *.cpp execute ':ClangFormat'
+autocmd BufWritePre *.go execute ':GoImportRun'
